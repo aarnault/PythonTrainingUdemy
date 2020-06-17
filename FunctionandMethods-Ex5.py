@@ -1,7 +1,7 @@
 def multiply(numbers):
-    new-List=1
+    new_List=1
     for nb in numbers:
-        new-List = new-List*nb
-    return new-List
+        new_List = new_List*nb
+    return new_List
 
-multiply([1,2,3,4])
+multiply([1,2,3,-4])
