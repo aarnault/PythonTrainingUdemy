@@ -1,4 +1,4 @@
-from math import sqrt
+
 
 class Line:
 
@@ -7,10 +7,14 @@ class Line:
         self.coor2 = coor2
 
     def distance(self):
-        return (sqrt((coor2[0] - coor1[0]))**2 + (coor2[1] - coor1 [1])**2)
+        x1, y1 = self.coor1
+        x2, y2 = self. coor2
+        return ((((x2 - x1)) ** 2 + (y2 - y1) ** 2)**0.5)
 
     def slope(self):
-        return ((coor2[1] - coor1[1])/(coor2[0] - coor1[0]))
+        x1, y1 = self.coor1
+        x2, y2 = self.coor2
+        return ((y2 - y1) / (x2 - x1))
 
 coor1 = (3,2)
 coor2 = (8,10)
