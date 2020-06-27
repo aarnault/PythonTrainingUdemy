@@ -7,8 +7,8 @@ values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eig
           'Jack': 11, 'Queen': 12, 'King': 13,'Ace': 14}
 # Suit, Rank, value of the Card
 class Card:
-    def __init__(selfself, suit, rank):
-        self.suit = suite
+    def __init__(self, suit, rank):
+        self.suit = suit
         self.rank = rank
         self.value = values[rank]
 
@@ -24,8 +24,8 @@ class Deck:
         for suit in suits:
             for rank in ranks:
             # Create the Card object
-            created_card= Card (suit, rank)
-            self.all_cards.append(created_card)
+                created_card = Card (suit, rank)
+                self.all_cards.append(created_card)
 # example: new_deck =Deck()
 # new_deck.all_cards[] (provide where in the memory in the computer)
 # first_card = new_deck.all_cards[0] (grab the 1st card)
@@ -63,11 +63,11 @@ player_one = Player('One')
 player_two = Player('Two')
 # Create the new deck
 new_deck = Deck()
-new.deck.shuffle()
+new_deck.shuffle()
 # split the deck
 for x in range(26):
     player_one.add_cards(new_deck.deal_one())
-    player_two.add_cards(new_deck.deal_two())
+    player_two.add_cards(new_deck.deal_one())
 
 game_on = True
 
@@ -81,17 +81,16 @@ while game_on:
         print('Player One  lost!')
         game_on = False
         break
-    if:
-        len(player_two.all_cards) == 0:
+    if len(player_two.all_cards) == 0:
         print('Player Two lost!')
         game_on = False
         break
     else:
 # STart a New round
-    player_one_cards= []
-    player_one_cards.append(player_one_cards.remove_one())
-    player_two_cards =[]
-    player_two_cards.append(player_one_cards.remove_two())
+        player_one_cards=[]
+        player_one_cards.append(player_one.remove_one())
+        player_two_cards=[]
+        player_two_cards.append(player_two.remove_one())
 
     at_war =True
 
@@ -110,19 +109,15 @@ while game_on:
         else:
             print('WAR!')
 
-            if len(player_one.all_cards) <3:
+            if len(player_one.all_cards) <5:
                 print("Player one unable to declare war, so Player Two wins!")
                 game_on = False
                 at_war = False
-            elif len(player_two.all_cards) <3:
+            elif len(player_two.all_cards) <5:
                 print("Player two unable to declare war, so Player One wins!")
                 game_on = False
                 at_war = False
             else:
                 for num in range (5):
-                    player_one_cards.append(player_one.remove_one))
-                    player_two_cards.append(player_one.remove_two))
-
-# Add the cards to the bottom of the stack
-# if Card equal: war (draw additional 3 cards) while at_war (as you can get 2 wars in a row)
-# has a player lost?
+                    player_one_cards.append(player_one.remove_one())
+                    player_two_cards.append(player_two.remove_one())
