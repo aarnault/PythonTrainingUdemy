@@ -3,4 +3,6 @@ import bs4
 
 result = requests.get("https://example.com/")
 
-result.text
+soup = bs4.BeautifulSoup(result.text, "lxml")
+
+soup.select("title")
