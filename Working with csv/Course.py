@@ -25,7 +25,7 @@ for line in data_lines [1:]:
 all_emails
 
 #full name
-full_name =[]
+full_names =[]
 
 for line in data_lines[1:]:
     full_names.apend(line[1]+' '+line[2])
